@@ -9,6 +9,7 @@ import {
 } from '@tanstack/react-router'
 import { App } from './App'
 import { CallbackPage } from './pages/CallbackPage'
+//import getConnectedUsersInfo from './UserInfo'
 
 // Root route avec <Outlet />
 const rootRoute = createRootRoute({
@@ -32,6 +33,12 @@ const callbackRoute = createRoute({
   path: '/callback',
   component: CallbackPage,
 })
+
+/*const infoRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/userinfo',
+  component: getConnectedUsersInfo,
+})*/
 
 const routeTree = rootRoute.addChildren([indexRoute, callbackRoute])
 
